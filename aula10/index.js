@@ -1,17 +1,33 @@
-// String, number, undefined, null, boolean, symbol
-const nome = 'Igor'; // string
-const nome1 = "Igor"; // string
-const nome2 = `Igor`; // string
-const num1 = 10; //number
-const num2 = 10.52; // number
-let nomeAluno; // undefined = não aponta pra local nenhum na memória
-const sobrenomeAluno = null; // Nulo -> não aponta pra local nenhum na memória (basicamente não tem nenhum valor | campo em branco)
-const aprovado = false; // Boolean = true, false (lógico)
+/*
+ *** ARITMÉTICAS ***
+    - + Adição / Concatenação
+    - - Subtração
+    - / Divisão
+    - Multiplicação
+    - ** Potenciação 
+    - % Resto da Divisão
 
-let a = 2;
-let b = a;
+ *** ORDEM DE PRECEDÊNCIA ***
+    -    ()
+    -    **
+    -    *
+    -    /
+    -    %
+    -    + -
 
-console.log(a, b); // 2, 2
+    Incremento = ++
+    Decremento = --
 
-a = 3;
-console.log(a, b); 
+    Operadores de atribuição
+
+    NaN = Not a Number
+    parseInt (inteiro)
+    parseFloat (decimais)
+    Number (se vira!)
+*/
+const num1 = 10;
+const num2 = Number('5');
+
+
+console.log(num1 + num2);
+console.log(typeof num2);
