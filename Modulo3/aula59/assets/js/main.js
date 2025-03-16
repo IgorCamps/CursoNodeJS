@@ -1,35 +1,34 @@
-function criaCalculadora() {
-    return {
-        display: document.querySelector('.display'),
-        btnCLear: document.querySelector('.btn-clear'),
+function Calculadora() {
+    
+        // Atributos ou métodos públicos
+        this.display = document.querySelector('.display'),
+        this.btnCLear = document.querySelector('.btn-clear'),
 
         // métodos
-        inicia() {
+        this.inicia = () => {
             this.cliqueBotoes();
             this.pressionaEnter();
-        },
+        }
 
-        pressionaEnter(){
+       this.pressionaEnter = ()=>{
             this.display.addEventListener('keyup', (e) =>{
                 if (e.keyCode === 13) {
                     this.realizaConta();
                 }
             });
-        },
+        }
 
-        clearDisplay() {
+        this.clearDisplay = () => {
             this.display.value = '';
-        },
+        }
 
-        apagaUm(){
+        this.apagaUm = () => {
             this.display.value = this.display.value.slice(0, -1);
-        },
+        }
 
-        realizaConta(){
-            let conta = this.display.value;
-
+        this.realizaConta = () => {
             try {
-                conta = eval(conta);
+                const conta = eval(this.display.value);
 
                 if(!conta) {
                     alert('Conta inválida');
@@ -40,9 +39,9 @@ function criaCalculadora() {
             } catch (e) {
                 alert('Conta inválida');
             }
-        },
+        };
 
-        cliqueBotoes() {
+        this.cliqueBotoes = () => {
             document.addEventListener('click', (e) => {
                 const el = e.target;
                 
@@ -62,14 +61,13 @@ function criaCalculadora() {
                     this.realizaConta();
                 }
             });
-        },
+        };
 
-        btnParaDisplay(valor) {
+        this.btnParaDisplay = (valor) => {
             this.display.value += valor;
             this.display.focus();
-        }
-    };
+        };
 };
 
-const calculadora = criaCalculadora();
+const calculadora =  new Calculadora();
 calculadora.inicia();
