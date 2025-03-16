@@ -9,4 +9,5 @@ function criaPessoa(nome, sobrenome) {
 }
 
 const p1 = criaPessoa('Igor', 'Campos');
-console.log(p1.fala('falando sobre JS'));
+const p2 = criaPessoa('Maria', 'Joaquina');
+console.log(p2.fala('falando sobre JS'));
