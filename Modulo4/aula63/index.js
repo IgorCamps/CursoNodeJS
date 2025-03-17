@@ -20,4 +20,4 @@ const nomes = ['Maria', 'João', 'Eduardo', 'Gabriel', 'Júlia'];
 const unshift = nomes.splice(0, 0, 'Luiz', 'Otavio');
 
 console.log(nomes, unshift);
-// console.log(Number.MAX_VALUE);
+console.log(Number.MAX_VALUE);
