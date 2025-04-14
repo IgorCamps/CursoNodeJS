@@ -1,7 +1,12 @@
+function teste() {
+    console.log(this);
+}
+
 class ControleRemoto {
     constructor(tv) {
         this.tv = tv;
         this.volume = 0;
+        teste()
     }
 
     // Metodo de instancia
@@ -15,17 +20,11 @@ class ControleRemoto {
     }
 
     // Metodo estatico
-    static trocaPilha() {
-        console.log('Ok, vou trocar.');
+    static soma(x,y) {
+        console.log(this);
     }
 }
 
 const contole1 = new ControleRemoto('LG');
-contole1.aumentarVolume();
-contole1.aumentarVolume();
-contole1.aumentarVolume();
-console.log(contole1);
 
-
-ControleRemoto.trocaPilha();
- 
+ControleRemoto.soma(1,2);
