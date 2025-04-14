@@ -30,4 +30,4 @@ const p1 = new Pessoa('Igor', 'Campos');
 const p2 = new Pessoa2('Maria', 'Campos');7
 
 console.log(p1);
-console.log(p2);
+console.log(p2  );
